@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Mont-Bold;
+  src: url(./Component/Asset/Font/MontserratAlternates-Bold.ttf);
+}
+
+@font-face {
+  font-family: Mont-SemiBold;
+  src: url(./Component/Asset/Font/MontserratAlternates-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Mont-Regular;
+  src: url(./Component/Asset/Font/MontserratAlternates-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lexend;
+  src: url(./Component/Asset/Font/Lexend-Regular.ttf);
+}
+
+@font-face {
+  font-family: Satisfy;
+  src: url(./Component/Asset/Font/Satisfy-Regular.ttf);
+}
