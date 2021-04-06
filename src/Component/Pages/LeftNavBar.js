@@ -6,13 +6,17 @@ import { makeStyles, Button, List, ListItem, ListItemIcon, ListItemText, Divider
 const useStyles = makeStyles((theme) => ({
 
     root:{
-        width: '16vw',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '18vw',
         height: '100vh',
         backgroundColor: '#1F1F33', 
 
         '@media (max-width: 600px)':{
             width:'100vw',
             height:'auto',
+            position: 'relative'
         },
     },
     wrapper:{
