@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core';
 import LeftNavBar from './LeftNavBar.js';
 import DailySection from './DailySection.js';
 import OverallSection from './OverallSection.js';
+import RateSection from './RateSection.js';
 
 const useStyles = makeStyles({
     root:{
@@ -19,6 +20,7 @@ export default function MainComponent() {
     return (
         <div className={classes.root}>
             <DailySection/>
+            <RateSection/>
             <OverallSection/>
         </div>
     )

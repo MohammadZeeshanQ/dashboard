@@ -90,7 +90,7 @@ export default function DailySection() {
                                         Total
                                     </Typography>
                                     <Typography variant='h5' className={classes.dataValue}>
-                                        91K
+                                        91k
                                     </Typography>
                                 </div>
                                                           
@@ -107,7 +107,7 @@ export default function DailySection() {
                                         Total
                                     </Typography>
                                     <Typography variant='h5' className={classes.dataValue}>
-                                        91K
+                                        91k
                                     </Typography>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export default function DailySection() {
                                         Total
                                     </Typography>
                                     <Typography variant='h5' className={classes.dataValue}>
-                                        91K
+                                        91k
                                     </Typography>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@ export default function DailySection() {
                                     Cases
                                 </Typography>
                                 <Typography variant='h5' className={classes.dataValue}>
-                                    124K
+                                    124k
                                 </Typography>
 
                             </div>
@@ -172,7 +172,7 @@ export default function DailySection() {
                                     Recovered
                                 </Typography>
                                 <Typography variant='h5' className={classes.dataValue}>
-                                    91K
+                                    91k
                                 </Typography>
 
                             </div>
