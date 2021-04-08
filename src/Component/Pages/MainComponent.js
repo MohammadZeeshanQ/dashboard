@@ -10,6 +10,8 @@ const useStyles = makeStyles({
     root:{
         position: 'relative',
         backgroundColor: "#efefff",
+        width: '100vw',
+        //height: '100vh',
     },  
 }); 
 

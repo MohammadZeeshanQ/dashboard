@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles, Grid, Typography } from '@material-ui/core';
+import Chart from 'chart.js/auto';
 
 // Icon Import
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
@@ -51,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
 }));
+
+
+
 
 export default function DailySection() {
 
@@ -178,8 +182,7 @@ export default function DailySection() {
 
                 </Grid>
             </div>
-
-
+     
         </div>
     )
 }
