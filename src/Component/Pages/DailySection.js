@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, Grid, Typography } from '@material-ui/core';
-import Chart from 'chart.js/auto';
 
 // Icon Import
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
@@ -11,12 +10,10 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 const useStyles = makeStyles((theme) => ({
     root:{
-        width: '100vw',
-        marginLeft:'1em',
+        width: '100%',
         paddingTop: '2em',
 
         '@media (max-width: 600px)':{
-            marginLeft:'0',
             paddingTop: '0',
         },
     },
@@ -26,6 +23,13 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         alignItems: 'center', 
         padding: '1em .6em',
+    },
+    dataLongContainer:{
+        backgroundColor: '#FFFFFF',
+        borderRadius: '1em',
+        display:'flex',
+        alignItems: 'center', 
+        padding: '1em .6em'
     },
     dataDiv:{
         flexGrow: 1,
@@ -45,10 +49,18 @@ const useStyles = makeStyles((theme) => ({
     dataHeading:{
         color: '#a9acb1',
         fontFamily: 'Lexend',
+        
+        '@media(max-width: 800px)':{
+            fontSize: '1em',
+        },
     },
     dataValue:{
         color: '#2a313d',
         fontFamily: 'Mont-SemiBold',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1.1em',
+        },
     },
 
 }));
@@ -65,6 +77,7 @@ export default function DailySection() {
             <div className={classes.wrapper}>
                 <Grid container className={classes.gridContainer}
                     xs={12} sm={12} md={12} spacing={2}
+                    justify='space-evenly'
                 >
                     <Grid item 
                         xs={6} sm={3} md={3}
@@ -121,10 +134,10 @@ export default function DailySection() {
 
 
                     <Grid item 
-                        xs={12} sm={3} md={5}
+                        xs={12} sm={6} md={5}
                         className={classes.gridItem}>
 
-                        <div className={classes.dataContainer}>
+                        <div className={classes.dataLongContainer}>
 
                             <div className={classes.dataTotalDiv}>
                                 

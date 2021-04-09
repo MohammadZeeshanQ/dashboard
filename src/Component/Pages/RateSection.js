@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { makeStyles, Grid, Typography } from '@material-ui/core';
+
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+
+
 
 const useStyles = makeStyles((theme) => ({
 
     root:{
-        width: '100vw',
-        marginLeft:'1em',
+        width: '100%',
         paddingTop: '2em',
 
         '@media (max-width: 600px)':{
@@ -32,26 +35,50 @@ const useStyles = makeStyles((theme) => ({
     dataTypeMainText:{
         color: '#a9acb1',
         fontFamily: 'Lexend',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1.1em',
+        },
     },
     dataNumberTextHeader:{
         color: '#a9acb1',
         fontFamily: 'Lexend',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1em',
+        },
     },
     dataTypeText:{
         color: '#2a313d',
         fontFamily: 'Mont-SemiBold',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1em',
+        },
     },
     subDivTextHeader:{
         color: '#a9acb1',
         fontFamily: 'Lexend',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1em',
+        },
     },
     dataNumberText:{
         color: '#2a313d',
         fontFamily: 'Mont-SemiBold',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1.1em',
+        },
     },
     subDivText:{
         color: '#2a313d',
         fontFamily: 'Mont-SemiBold',
+
+        '@media(max-width: 800px)':{
+            fontSize: '1.1em',
+        },
     }
 
 
@@ -60,6 +87,16 @@ const useStyles = makeStyles((theme) => ({
 export default function RateSection() {
 
     const classes = useStyles();
+    const [mobileIcon, setMobileIcon] = useState(false);
+
+    var windowWidthCheck = window.outerWidth;
+
+
+    useEffect(()=>{
+
+        console.log(windowWidthCheck,': Screen size');
+
+    },[windowWidthCheck]);
 
     return (
         <div className={classes.root}>
@@ -68,6 +105,7 @@ export default function RateSection() {
 
                 <Grid 
                     container
+                    justify='space-evenly'
                     className={classes.gridContainer}
                     spacing={2}
                     xs={12} sm={12} md={12}
@@ -91,11 +129,10 @@ export default function RateSection() {
                                 <Typography variant='h6' gutterBottom className={classes.dataNumberTextHeader}>
                                     Current Rate
                                 </Typography>
-                                <Typography variant='h5' className={classes.dataNumberText}>
+                                <Typography variant='h4' className={classes.dataNumberText}>
                                     87%
                                 </Typography>
                             </div>
-
                         </div>
                         
                     </Grid>
@@ -118,28 +155,28 @@ export default function RateSection() {
                             <div className={classes.dataDailyNumber}>
 
                                 <div className={classes.dataNumberSubDiv}>
-                                    <Typography className={classes.subDivTextHeader} variant='body1' gutterBottom>
+                                    <Typography className={classes.subDivTextHeader} variant='h6' gutterBottom>
                                         Current Rate
                                     </Typography>
-                                    <Typography className={classes.subDivText} variant='h5'>
+                                    <Typography className={classes.subDivText} variant='h4'>
                                         87k
                                     </Typography>
                                 </div>
 
                                 <div className={classes.dataNumberSubDiv}>
-                                    <Typography className={classes.subDivTextHeader} variant='body1' gutterBottom>
+                                    <Typography className={classes.subDivTextHeader} variant='h6' gutterBottom>
                                         Recovered
                                     </Typography>
-                                    <Typography className={classes.subDivText} variant='h5'>
+                                    <Typography className={classes.subDivText} variant='h4'>
                                         93k
                                     </Typography>
                                 </div>
 
                                 <div className={classes.dataNumberSubDiv}>
-                                    <Typography className={classes.subDivTextHeader} variant='body1' gutterBottom>
+                                    <Typography className={classes.subDivTextHeader} variant='h6' gutterBottom>
                                         Today Total 
                                     </Typography>
-                                    <Typography className={classes.subDivText} variant='h5'>
+                                    <Typography className={classes.subDivText} variant='h4'>
                                         187k
                                     </Typography>
                                 </div>
@@ -169,7 +206,7 @@ export default function RateSection() {
                                 <Typography variant='h6' gutterBottom className={classes.dataNumberTextHeader} >
                                     Positive 
                                 </Typography>
-                                <Typography variant='h5' className={classes.dataNumberText}>
+                                <Typography variant='h4' className={classes.dataNumberText}>
                                     145k
                                 </Typography>
                             </div>

@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
-import { makeStyles, Button, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, RootRef, } from '@material-ui/core';
+import React from 'react'
+import { makeStyles, Button, List, ListItem, ListItemIcon, ListItemText, Divider} from '@material-ui/core';
 
-
+import Logo from '../Asset/Image/endless-knot.png';
 
 const useStyles = makeStyles((theme) => ({
 
     root:{
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '18vw',
+        width: '100%',
         height: '100vh',
         backgroundColor: '#1F1F33', 
 
@@ -20,13 +17,34 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     wrapper:{
+        paddingTop: '1em',
 
     },
+    logoDiv:{
+        width: '100%',
+        height: '100%',
+        textAlign: 'center',
+    },
+    logoImage:{
+        width: '8em',
+
+        '@media(max-width: 600px)':{
+            width: '6em'
+        },
+
+        '@media(min-width: 650px) and (max-width: 800px)':{
+            width: '4em'
+        },
+    },
     tabsDiv:{
-        border:'1px white solid',
+        paddingTop: '1em',
+
+        '@media(max-width: 600px)':{
+            paddingTop: '0',
+        },
     },
     tabListItem:{
-        fontFamily: 'Lexend',
+        fontFamily: 'Mont-SemiBold',
         color: '#f0f0f6',
         padding: '1em 0 1em 2em',
         '&:hover':{
@@ -55,6 +73,10 @@ export default function LeftNavBar() {
         <div className={classes.root}>
 
             <div className={classes.wrapper}>
+
+                <div className={classes.logoDiv}>
+                    <img src={Logo} className={classes.logoImage} alt='Company Logo' />
+                </div>
 
                 <div className={classes.tabsDiv}>
                 
